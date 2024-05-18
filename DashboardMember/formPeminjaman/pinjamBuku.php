@@ -20,10 +20,12 @@ if(isset($_POST["pinjam"]) ) {
   if(pinjamBuku($_POST) > 0) {
     echo "<script>
     alert('Buku berhasil dipinjam');
+    window.location.href = '../../DashboardMember/buku/daftarBuku.php';
     </script>";
   }else {
     echo "<script>
     alert('Buku gagal dipinjam!');
+    window.location.href = '../../DashboardMember/buku/daftarBuku.php';
     </script>";
   }
   
@@ -51,7 +53,7 @@ if(isset($_POST["pinjam"]) ) {
     <nav class="navbar fixed-top bg-body-tertiary shadow-sm">
       <div class="container-fluid p-3">
         <a class="navbar-brand" href="#">
-          <img src="../../assets/logoNav.png" alt="logo" width="120px">
+          <img src="../../assets/logoPerpusIn.png" alt="logo" width="120px">
         </a>
         
         <a class="btn btn-tertiary" href="../dashboardMember.php">Dashboard</a>
@@ -130,10 +132,6 @@ if(isset($_POST["pinjam"]) ) {
             <input type="text" class="form-control" placeholder="kelas" aria-label="kelas" aria-describedby="basic-addon1" value="<?= $item["kelas"]; ?>" readonly>
             </div>
           <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Jurusan</span>
-            <input type="text" class="form-control" placeholder="jurusan" aria-label="jurusan" aria-describedby="basic-addon1" value="<?= $item["jurusan"]; ?>" readonly>
-            </div>
-          <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1">No Tlp</span>
             <input type="no_tlp" class="form-control" placeholder="no tlp" aria-label="no tlp" aria-describedby="basic-addon1" value="<?= $item["no_tlp"]; ?>" readonly>
             </div>
@@ -165,12 +163,7 @@ if(isset($_POST["pinjam"]) ) {
             <input type="number" name="nisn" class="form-control" placeholder="nisn" aria-label="nisn" aria-describedby="basic-addon1" value="<?php echo htmlentities($_SESSION["member"]["nisn"]); ?>" readonly>
         </div>
     <!--Ambil data id admin-->
-    <select name="id" class="form-select" aria-label="Default select example">
-      <option selected>Pilih id admin</option>
-      <?php foreach ($admin as $item) : ?>
-      <option><?= $item["id"]; ?></option>
-      <?php endforeach; ?>
-    </select>
+    <input type="hidden" name="id" value="1">
     <div class="input-group mb-3 mt-3">
             <span class="input-group-text" id="basic-addon1">Tanggal pinjam</span>
             <input type="date" name="tgl_peminjaman" id="tgl_peminjaman" class="form-control" placeholder="id buku" aria-label="tgl_peminjaman" aria-describedby="basic-addon1" onchange="setReturnDate()" required>
@@ -185,6 +178,18 @@ if(isset($_POST["pinjam"]) ) {
     </form>
     </div>
     </div>
+
+    <script>
+    function validateForm() {
+        const tglPeminjaman = document.getElementById("tgl_peminjaman").value;
+        if (!tglPeminjaman) {
+            alert("Tanggal peminjaman harus diisi!");
+            return false;
+        }
+        // Add other validation checks here if needed
+        return true;
+    }
+</script>
   
     <div class="alert alert-danger mt-4" role="alert"><span class="fw-bold">Catatan :</span> Setiap keterlambatan pada pengembalian buku akan dikenakan sanksi berupa denda.</div>
     
@@ -192,7 +197,7 @@ if(isset($_POST["pinjam"]) ) {
     
     <footer class="shadow-lg bg-subtle p-3">
       <div class="container-fluid d-flex justify-content-between">
-      <p class="mt-2">Created by <span class="text-primary"> Mangandaralam Sakti</span> © 2023</p>
+      <p class="mt-2">Created by <span class="text-primary"> Masyaallah MYD B2S</span> © 2024</p>
       <p class="mt-2">versi 1.0</p>
       </div>
   </footer>

@@ -125,8 +125,7 @@ function searchMember ($keyword) {
    $searchMember = "SELECT * FROM member WHERE 
    nisn LIKE '%$keyword%' OR 
    kode_member LIKE '%$keyword%' OR
-   nama LIKE '%$keyword%' OR 
-   jurusan LIKE '%$keyword%'
+   nama LIKE '%$keyword%' 
    ";
    return queryReadData($searchMember);
 }

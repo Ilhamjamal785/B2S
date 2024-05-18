@@ -18,7 +18,6 @@ function signUp($data) {
   $confirmPw = mysqli_real_escape_string($connect, $data["confirmPw"]);
   $jk = htmlspecialchars($data["jenis_kelamin"]);
   $kelas = htmlspecialchars($data["kelas"]);
-  $jurusan = htmlspecialchars($data["jurusan"]);
   $noTlp = htmlspecialchars($data["no_tlp"]);
   $tglDaftar = $data["tgl_pendaftaran"];
   
@@ -52,7 +51,7 @@ function signUp($data) {
   $password = password_hash($password, PASSWORD_DEFAULT);
   
   
-  $querySignUp = "INSERT INTO member VALUES($nisn, '$kodeMember', '$nama', '$password', '$jk', '$kelas', '$jurusan', '$noTlp', '$tglDaftar')";
+  $querySignUp = "INSERT INTO member VALUES($nisn, '$kodeMember', '$nama', '$password', '$jk', '$kelas', '$noTlp', '$tglDaftar')";
   mysqli_query($connect, $querySignUp);
   return mysqli_affected_rows($connect);
   

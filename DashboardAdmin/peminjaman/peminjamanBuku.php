@@ -1,7 +1,7 @@
 <?php
 // Halaman pengelolaan peminjaman buku perpustakaan
 require "../../config/config.php";
-$dataPeminjam = queryReadData("SELECT peminjaman.id_peminjaman, peminjaman.id_buku, buku.judul, peminjaman.nisn, member.nama, member.kelas, member.jurusan, peminjaman.id_admin,  peminjaman.tgl_peminjaman, peminjaman.tgl_pengembalian 
+$dataPeminjam = queryReadData("SELECT peminjaman.id_peminjaman, peminjaman.id_buku, buku.judul, peminjaman.nisn, member.nama, member.kelas, peminjaman.id_admin,  peminjaman.tgl_peminjaman, peminjaman.tgl_pengembalian 
 FROM peminjaman 
 INNER JOIN member ON peminjaman.nisn = member.nisn
 INNER JOIN buku ON peminjaman.id_buku = buku.id_buku");
@@ -21,7 +21,7 @@ INNER JOIN buku ON peminjaman.id_buku = buku.id_buku");
   <nav class="navbar fixed-top bg-body-tertiary shadow-sm">
       <div class="container-fluid p-3">
         <a class="navbar-brand" href="#">
-          <img src="../../assets/logoNav.png" alt="logo" width="120px">
+          <img src="../../assets/logoPerpusIn.png" alt="logo" width="120px">
         </a>
         
         <a class="btn btn-tertiary" href="../dashboardAdmin.php">Dashboard</a>
@@ -42,13 +42,13 @@ INNER JOIN buku ON peminjaman.id_buku = buku.id_buku");
             <th class="bg-primary text-light">Nisn Siswa</th>
             <th class="bg-primary text-light">Nama siswa</th>
             <th class="bg-primary text-light">Kelas</th>
-            <th class="bg-primary text-light">Jurusan</th>
             <th class="bg-primary text-light">Id Admin</th>
             <th class="bg-primary text-light">Tanggal Peminjaman</th>
             <th class="bg-primary text-light">Tanggal Pengembalian</th>
           </tr>
         </thead>
        <?php foreach ($dataPeminjam as $item) : ?>
+        <thead class="text-center">
       <tr>
        <td><?= $item["id_peminjaman"]; ?></td>
       <td><?= $item["id_buku"]; ?></td>
@@ -56,11 +56,11 @@ INNER JOIN buku ON peminjaman.id_buku = buku.id_buku");
       <td><?= $item["nisn"]; ?></td>
       <td><?= $item["nama"]; ?></td>
       <td><?= $item["kelas"]; ?></td>
-      <td><?= $item["jurusan"]; ?></td>
       <td><?= $item["id_admin"]; ?></td>
       <td><?= $item["tgl_peminjaman"]; ?></td>
       <td><?= $item["tgl_pengembalian"]; ?></td>
       </tr>
+      </thead>
       <?php endforeach;?>
     </table>
     </div>
@@ -69,7 +69,7 @@ INNER JOIN buku ON peminjaman.id_buku = buku.id_buku");
   
   <footer class="fixed-bottom shadow-lg bg-subtle p-3">
       <div class="container-fluid d-flex justify-content-between">
-      <p class="mt-2">Created by <span class="text-primary"> Mangandaralam Sakti</span> © 2023</p>
+      <p class="mt-2">Created by <span class="text-primary"> Masyaallah MYD B2S</span> © 2024</p>
       <p class="mt-2">versi 1.0</p>
       </div>
     </footer>

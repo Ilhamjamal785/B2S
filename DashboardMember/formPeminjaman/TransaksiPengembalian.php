@@ -32,7 +32,7 @@ if(isset($_POST["search"]) ) {
     <nav class="navbar fixed-top bg-body-tertiary shadow-sm">
       <div class="container-fluid p-3">
         <a class="navbar-brand" href="#">
-          <img src="../../assets/logoNav.png" alt="logo" width="120px">
+          <img src="../../assets/logoPerpusIn.png" alt="logo" width="120px">
         </a>
         
         <a class="btn btn-tertiary" href="../dashboardMember.php">Dashboard</a>
@@ -66,6 +66,7 @@ if(isset($_POST["search"]) ) {
       </tr>
       </thead>
         <?php foreach ($dataPengembalian as $item) : ?>
+          <thead class="text-center">
       <tr>
         <td><?= $item["id_pengembalian"]; ?></td>
         <td><?= $item["id_buku"]; ?></td>
@@ -78,6 +79,7 @@ if(isset($_POST["search"]) ) {
         <td><?= $item["keterlambatan"]; ?></td>
         <td><?= $item["denda"]; ?></td>
       </tr>
+      </thead>
         <?php endforeach; ?>
     </table>
     </div>
@@ -85,7 +87,7 @@ if(isset($_POST["search"]) ) {
     
     <footer class="fixed-bottom shadow-lg bg-subtle p-3">
       <div class="container-fluid d-flex justify-content-between">
-      <p class="mt-2">Created by <span class="text-primary"> Mangandaralam Sakti</span> © 2023</p>
+      <p class="mt-2">Created by <span class="text-primary"> Masyaallah MYD B2S</span> © 2024</p>
       <p class="mt-2">versi 1.0</p>
       </div>
   </footer>

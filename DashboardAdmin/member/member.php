@@ -28,7 +28,7 @@ if(isset($_POST["search"]) ) {
     <nav class="navbar fixed-top bg-body-tertiary shadow-sm">
       <div class="container-fluid p-3">
         <a class="navbar-brand" href="#">
-          <img src="../../assets/logoNav.png" alt="logo" width="120px">
+          <img src="../../assets/logoPerpusIn.png" alt="logo" width="120px">
         </a>
         
         <a class="btn btn-tertiary" href="../dashboardAdmin.php">Dashboard</a>
@@ -54,20 +54,19 @@ if(isset($_POST["search"]) ) {
             <th class="bg-primary text-light">Nama</th>
             <th class="bg-primary text-light">Jenis Kelamin</th>
             <th class="bg-primary text-light">Kelas</th>
-            <th class="bg-primary text-light">Jurusan</th>
             <th class="bg-primary text-light">No Telepon</th>
             <th class="bg-primary text-light">Pendaftaran</th>
             <th class="bg-primary text-light">Delete</th>
           </tr>
         </thead>
       <?php foreach($member as $item) : ?>
-      <tr>
+      <thead class="text-center">
+        <tr>
         <td><?=$item["nisn"];?></td>
         <td><?=$item["kode_member"];?></td>
         <td><?=$item["nama"];?></td>
         <td><?=$item["jenis_kelamin"];?></td>
         <td><?=$item["kelas"];?></td>
-        <td><?=$item["jurusan"];?></td>
         <td><?=$item["no_tlp"];?></td>
         <td><?=$item["tgl_pendaftaran"];?></td>
         <td>
@@ -75,7 +74,8 @@ if(isset($_POST["search"]) ) {
              <a href="deleteMember.php?id=<?= $item["nisn"]; ?>" class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus data member ?');"><i class="fa-solid fa-trash"></i></a>
            </div>
         </td>
-       </tr>
+        </tr>
+       </thead>
       <?php endforeach;?>
     </table>
     </div>
@@ -83,7 +83,7 @@ if(isset($_POST["search"]) ) {
   
     <footer class="fixed-bottom shadow-lg bg-subtle p-3">
       <div class="container-fluid d-flex justify-content-between">
-      <p class="mt-2">Created by <span class="text-primary"> Mangandaralam Sakti</span> © 2023</p>
+      <p class="mt-2">Created by <span class="text-primary"> Masyaallah MYD B2S</span> © 2024</p>
       <p class="mt-2">versi 1.0</p>
       </div>
     </footer>

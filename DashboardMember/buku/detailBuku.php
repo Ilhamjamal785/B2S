@@ -16,7 +16,7 @@ $query = queryReadData("SELECT * FROM buku WHERE id_buku = '$idBuku'");
     <nav class="navbar fixed-top bg-body-tertiary shadow-sm">
       <div class="container-fluid p-3">
         <a class="navbar-brand" href="#">
-          <img src="../../assets/logoNav.png" alt="logo" width="120px">
+          <img src="../../assets/logoPerpusIn.png" alt="logo" width="120px">
         </a>
         
         <a class="btn btn-tertiary" href="../dashboardMember.php">Dashboard</a>
@@ -52,7 +52,7 @@ $query = queryReadData("SELECT * FROM buku WHERE id_buku = '$idBuku'");
   
   <footer class="shadow-lg bg-subtle p-3">
       <div class="container-fluid d-flex justify-content-between">
-      <p class="mt-2">Created by <span class="text-primary"> Mangandaralam Sakti</span> © 2023</p>
+      <p class="mt-2">Created by <span class="text-primary"> Masyaallah MYD B2S</span> © 2024</p>
       <p class="mt-2">versi 1.0</p>
       </div>
   </footer>

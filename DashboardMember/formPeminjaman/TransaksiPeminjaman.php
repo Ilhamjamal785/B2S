@@ -28,7 +28,7 @@ WHERE peminjaman.nisn = $akunMember");
      <nav class="navbar fixed-top bg-body-tertiary shadow-sm">
       <div class="container-fluid p-3">
         <a class="navbar-brand" href="#">
-          <img src="../../assets/logoNav.png" alt="logo" width="120px">
+          <img src="../../assets/logoPerpusIn.png" alt="logo" width="120px">
         </a>
         
         <a class="btn btn-tertiary" href="../dashboardMember.php">Dashboard</a>
@@ -56,6 +56,7 @@ WHERE peminjaman.nisn = $akunMember");
       
       <tr>
       <?php foreach ($dataPinjam as $item) : ?>
+        <thead class="text-center">
         <td><?= $item["id_peminjaman"]; ?></td>
         <td><?= $item["id_buku"]; ?></td>
         <td><?= $item["judul"]; ?></td>
@@ -67,6 +68,7 @@ WHERE peminjaman.nisn = $akunMember");
         <td>
           <a class="btn btn-success" href="pengembalianBuku.php?id=<?= $item["id_peminjaman"]; ?>"> Kembalikan</a>
         </td>
+        </thead>
       <?php endforeach; ?>
       </tr>
     </table>
@@ -75,7 +77,7 @@ WHERE peminjaman.nisn = $akunMember");
   
   <footer class="fixed-bottom shadow-lg bg-subtle p-3">
       <div class="container-fluid d-flex justify-content-between">
-      <p class="mt-2">Created by <span class="text-primary"> Mangandaralam Sakti</span> © 2023</p>
+      <p class="mt-2">Created by <span class="text-primary"> Masyaallah MYD B2S</span> © 2024</p>
       <p class="mt-2">versi 1.0</p>
       </div>
   </footer>

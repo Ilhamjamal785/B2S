@@ -87,28 +87,9 @@ if(isset($_POST["signUp"]) ) {
   <label class="input-group-text" for="inputGroupSelect01">Kelas</label>
   <select class="form-select" id="inputGroupSelect01" name="kelas">
     <option selected>Choose</option>
-    <option value="X">X</option>
-    <option value="XI">XI</option>
-    <option value="XII">XII</option>
-    <option value="XIII">XIII</option>
-    </select>
-  </div>
-  
-  <div class="input-group mb-2">
-  <label class="input-group-text" for="inputGroupSelect01">Jurusan</label>
-  <select class="form-select" id="inputGroupSelect01" name="jurusan">
-    <option selected>Choose</option>
-    <option value="Desain Gambar Mesin">Desain Gambar Mesin</option>
-    <option value="Teknik Pemesinan">Teknik Pemesinan</option>
-    <option value="Teknik Otomotif">Teknik Otomotif</option>
-    <option value="Desain Pemodelan Informasi Bangunan">Desain Pemodelan Informasi Bangunan</option>
-    <option value="Teknik Konstruksi Perumahan">Teknik Konstruksi Perumahan</option>
-    <option value="Teknik Tenaga Listrik">Teknik Tenaga Listrik</option>
-    <option value="Teknik Instalasi Tenaga Listrik">Teknik Instalasi Tenaga Listrik</option>
-    <option value="Teknik Komputer Jaringan">Teknik Komputer Jaringan</option>
-    <option value="Sistem Informatika Jaringan dan Aplikasi">Sistem Informatika Jaringan dan Aplikasi</option>
-    <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
-    <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
+    <option value="VI">VI</option>
+    <option value="VII">VII</option>
+    <option value="IX">IX</option>
     </select>
   </div>
   
